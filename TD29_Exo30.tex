@@ -1,0 +1,64 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{fourier}
+\usepackage{MnSymbol,wasysym}
+\begin{document}
+\fbox{36} $\heartsuit$ Soit f un endomorphisme de (E, +, .). Montrons que : Ker($f^0$) $\subset$ Ker($f^1$) $\subset$  Ker($f^2$) $\subset$  Ker($f^3$)..
+
+\textit{Mais d'où ça sort ça, voyons? Ce n'est pas bien dur en vrai :}
+Avec les règles de la formule : "CASSE TOI" ou "CAH SOH TOA" (pardon) :\\
+$\frownie{}$\\ 
+
+\begin{tikzpicture}
+\node (a) at (-0.5,1) {a} ;
+\draw (0,0) -- (0,2) ;
+\node (a) at (1,1.5) {b} ;
+\draw (0,2) -- (2,0) ;
+\node (a) at (1,-0.5) {c} ;
+\draw (0,0) -- (2,0);
+\draw[thick] (0.0,0.1) -- (0.1,0.1);
+\draw[thick] (0.1,0.1) -- (0.1,0);
+\draw (1.5,0) arc (180:155:1) node {$\theta$}; 
+\end{tikzpicture}\\
+
+
+\parindent=2cm a =?\\
+\parindent=2cm b =?\\
+\parindent=2cm c =?\\
+
+\parindent=0cm\text{On a} $\tan(\arctan(x))= x = \frac{x}{1}$\\
+
+\text{de plus} $\tan(\theta) = \frac{\text{opposé}}{\text{adjacent}} = \frac{a}{c}$\\
+En prenant $\arctan(x)=\theta:$\\
+on a l'égalité : $\frac{a}{c} = \frac{x}{1}$ \\
+on identifie :\\
+\parindent=2cm a=x\\
+\parindent=2cm c=1\\
+
+\parindent=0cm \text{Pour avoir b, on sait que par le théorème de Pythagore:} \\
+\parindent=2cm $b^2 = a^2 + c^2 = x^2 + 1 $\\
+\parindent=2cm $b = \sqrt{x^2+1}$\\
+
+\parindent=0cm \text{De la même manière :} $\sin(\theta) =\frac{\text{opposé}}{\text{hypo}}  = \frac{a}{b} = \frac{x}{\sqrt{x^2+1}} = \sin(\arctan(x))$\\
+
+$\smiley{}$\\
+\text{Revenons au calcul intégral :}\\
+\text{On pose t=} $\sqrt{1+x^2}$: \\
+ainsi x=$\sqrt{t^2-1}$ \\
+\text{et on a : dx =} $\frac{2t}{2\cdot \sqrt{t^2-1}} \cdot dt$ = $\frac{t}{\sqrt{t^2-1}} \cdot dt$ \text{ après simplification par 2}\\
+
+\text{Ainsi I =} $\int_0^1 \sin(\arctan(x))dx$ = $\int_0^1\frac{x}{\sqrt{x^2+1}} \cdot dx$ =  $\int\frac{t}{\sqrt{t^2-1}} \cdot \frac{\sqrt{t^2-1}}{t} \cdot dt$ = $\int 1 \cdot dt$ \\
+\text{Tiens, tiens, une formule facile à calculer : I = }$\left[ t \ \right]$ \\
+\text{On remplace par ce qu'on a posé normalement pour revenir aux bornes qu'on connait :} I = $\left[ \sqrt{1+x^2} \ \right]_0^1 = \sqrt{2}-1$ \\
+
+\text{Est-ce que :} $\left( \frac{n^2+n+1}{n^2-n+1} \right)^n$ \text{ peut s'écrire sous la forme} $\left( 1+ \frac{2}{n} \right)^n$ \text{comme on sait que cette dernière tend vers} $e^2$
+MERCI A TOI DUC DE M'AVOIR APPRIS A CODER EN \LaTeX{}.
+\end{document}

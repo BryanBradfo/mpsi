@@ -1,0 +1,50 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{fourier}
+\usepackage{MnSymbol,wasysym}
+\usepackage{fancybox}
+\begin{document}
+\fbox{39} $\heartsuit$ Soit f un endomorphisme de (E, +, .). Montrons l'équivalence entre \\
+Im(f) = Im($f^3$) et Im(f) = Im($f^2$), \\
+soit pour que vous voyez bien : Im(f) = Im($f^3$) $\Leftrightarrow$ Im(f) = Im($f^2$) (Waa, là je vois beaucoup mieux).\\
+
+Il y a ainsi DEUX SENS à montrer. \\
+
+\fbox{$\Rightarrow$} Supposons que Im(f) = Im($f^3$), \\
+ainsi,
+Im(f) $\subset$ Im($f^3$) et Im(f) $\supset$ Im($f^3$)\\
+Or, on a Im($f^3$) $\subset$ Im($f^2$) (par la propriété : E $\supset$ Im(f) $\supset$ Im($f^2$) $\supset$ Im($f^3$) $\supset$ Im($f^4$) ..)\\ ainsi Im(f) $\subset$ Im($f^3$) et Im($f^3$) $\subset$ Im($f^2$), alors \ovalbox{Im(f) $\subset$ Im($f^2$)}\\
+\underline{Mais qu'en est-il de l'autre sens} ? Im(f) $\supset$ Im($f^2$)?\\
+Ceci, je l'ai dit plus tôt, ça vient de : E $\supset$ 
+\ovalbox{Im(f) $\supset$ Im($f^2$)} $\supset$ Im($f^3$) $\supset$ Im($f^4$) .. \\
+qui peut lui-même venir de la propriété : pour f et g, deux endomorphismes de (E,+,.), \ovalbox{Im(g $\circ$ f) $\subset$ Im(g)}\\
+On a bien l'implication : \fbox{Im(f) = Im($f^3$) $\Rightarrow$ Im(f) = Im($f^2$)}
+
+\fbox{$\Leftarrow$} Supposons que Im(f) = Im($f^2$),\\
+ainsi,
+Im(f) $\subset$ Im($f^2$) et Im(f) $\supset$ Im($f^2$)\\
+On a facilement Im(f)$\supset$ Im($f^2$) $\supset$ Im($f^3$), ainsi \ovalbox{Im(f) $\supset$ Im($f^3$)}.\\
+\underline{Pour l'autre sens, comment avoir} : Im(f) $\subset$ Im($f^3$) ?\\
+Comme Im(f) $\subset$ Im($f^2$) (par hypothèse), 
+Prenons $\vec{a}$ dans Im($f^2$). Il s'écrit $\vec{a}$=$f^2$($\vec{b}$) pour au moins un $\vec{b}$ dans (E,+,.)\\
+\underline{\textit{On doit montrer que}} $\vec{a}$=$f^3$($\vec{c}$) pour au moins un $\vec{c}$ bien choisis \\
+Afin d'utiliser l'hypothèse, on écrit $\vec{a}$=f(f($\vec{b}$)). Le vecteur f($\vec{b}$) est dans Im(f).\\
+Par hypothèse "on n'a rien perdu de f à $f^2$", il est donc dans Im($f^2$). Il s'écrit f($\vec{b}$) = $f^2$($\vec{c}$) pour au moins un $\vec{c}$ dans (E,+,.).\\
+Mais alors, on a $\vec{a}$=f($f^3$($\vec{c}$)). C'est gagné $\vec{a}$ est dans Im($f^3$)\\
+ on lit : \ovalbox{Im(f) $\subset$ Im($f^3$)}\\
+On a également l'implication : \fbox{Im(f) = Im($f^2$) $\Rightarrow$ Im(f) = Im($f^3$)}\\
+
+\cornersize{2}
+\setlength{\fboxsep}{2.5 mm}
+\setlength{\fboxrule}{1 mm}
+
+Comme on a bien les deux implications, on a l'équivalence, enfin, on peut encadrer ceci : \fbox{\textcolor{red}{Im(f) = Im($f^3$) $\Leftrightarrow$ Im(f) = Im($f^2$)}}
+\end{document}

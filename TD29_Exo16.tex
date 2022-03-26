@@ -1,0 +1,24 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\begin{document}
+$\tikz[baseline=(letter.base)]\node[draw,circle,inner sep=1pt] (letter) {16};\  h\mapsto (1+h)^{\frac{1}{h}}\ est\ d\acute{e}finie\ sur\ I=]-1,0[\cup]0, +\infty[.\ Elle\ est\ de\ classe\ C^{\infty}\ donc\ admet\ un\ DL\ de\ tout\ ordre\ en\  particulier\ d'ordre\ 3\
+En\ effet,\
+(1+h)^{\frac{1}{h}} = e^{\frac{1}{h}ln(1+h)} = e^{1-\frac{h}{2}+\frac{h^{2}}{3}+o(h^{2})}\
+= e^1.e^{\frac{-h}{2}}.e^{\frac{h^3}{3}+o(h^2)}\
+= e(1-\frac{h}{2}+\frac{h^2}{8}+o(h^2))(1+\frac{h^2}{3}+o(h^2))\
+= (e-\frac{eh}{2}+\frac{eh^2}{8}+o(h^2))(1+\frac{h^2}{3}+o(h^2))\
+= e+\frac{eh^2}{3}-\frac{eh}{2}+\frac{eh^2}{8}+o(h^2)
+= e-\frac{eh}{2}+\frac{11}{24}h^2 e+o(h^2)h\to_0\
+$
+\begin{center}
+$(1+h)^{\frac{1}{h}}=e-\frac{eh}{2}+\frac{11}{24}h^e+o(h^2)h\to_0$
+\end{center}
+\end{document}
